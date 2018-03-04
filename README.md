@@ -1,10 +1,10 @@
-# Language-dtd package for Atom
+# Language-testmd package for Atom
 
-Adds syntax highlighting and snippets to DTD (Document Type Definition) files in Atom.
+Adds syntax highlighting and snippets to testmd (Test Markdown) files in Atom.
 
 ## Snippets
 
-### From DTD file
+### From TESTMD file
 
 | Snippets      | Result                                         |
 | ------------- |:----------------------------------------------:|
@@ -13,7 +13,7 @@ Adds syntax highlighting and snippets to DTD (Document Type Definition) files in
 | `attlist`     | &lt;!ATTLIST element attribute TYPE #VALUE&gt; |
 | `entity`      | &lt;!ENTITY name "value"&gt;                   |
 
-### From XML file
+### From MD file
 
 | Snippets          | Result                                         |
 | ----------------- |:----------------------------------------------:|

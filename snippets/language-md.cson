@@ -1,4 +1,4 @@
-'.text.xml':
+'.text.md':
   'DTD Element':
     'prefix': 'dtd-element'
     'body': '<!ELEMENT ${1:name} (${2:content})>$3'
