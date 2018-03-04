@@ -1,48 +1,66 @@
 'name': 'TESTMD'
 'scopeName': 'source.testmd'
 'fileTypes': [
-    'dtd'
+    'testmd'
 ]
 
 'patterns': [
   {
-    'begin': '^(open)(\s+)(.*)$'
+    'match': '^(title)(\\s+)(.*)$'
     'captures':
       '1':
-        'name': 'entity.name.tag.dtd'
+        'name': 'meta.name.tag.testmd'
       '2':
-        'name': 'punctuation.definition.tag.dtd'
+        'name': 'punctuation.definition.tag.testmd'
       '3':
-        'name': 'string.name.tag.dtd'
-
-    'end': '\\s*(>)'
-
-    'name': 'meta.tag.type.dtd'
-
-    'patterns': [
-      {
-        'match': '\\s+(CDATA|IDREFS|IDREF|ID|NMTOKENS|NMTOKEN|ENTITY|ENTITIES|NOTATION|SYSTEM|NDATA)'
-        'name': 'keyword.other.data-type.dtd'
-      }
-      {
-        'match': '(#[A-Z]+)|(ANY)|(EMPTY)'
-        'name': 'constant.language.dtd'
-      }
-      {
-        'begin': '"|\''
-        'end': '"|\''
-        'name': 'string.quoted.double.dtd'
-      }
-      {
-        'begin': '(%[a-zA-Z][a-zA-Z0-9_-])'
-        'end': ';'
-        'name': 'variable.language.dtd'
-      }
-    ]
+        'name': 'comment.line.tag.testmd'
   }
   {
-    'begin': '(<!--)'
-    'end': '(-->)'
-    'name': 'comment.block.dtd'
+    'match': '^(note)(\\s+)(.*)$'
+    'captures':
+      '1':
+        'name': 'meta.name.tag.testmd'
+      '2':
+        'name': 'punctuation.definition.tag.testmd'
+      '3':
+        'name': 'comment.line.tag.testmd'
   }
+  {
+    'match': '^(open)(\\s+)(.*)$'
+    'captures':
+      '1':
+        'name': 'support.class.tag.testmd'
+      '2':
+        'name': 'punctuation.definition.tag.testmd'
+      '3':
+        'name': 'string.quoted.double.tag.testmd'
+  }
+  {
+    'match': '^(find)(\\s+)(field|button)(\\s+)(.*)$'
+    'captures':
+      '1':
+        'name': 'support.function.tag.testmd'
+      '2':
+        'name': 'punctuation.definition.tag.testmd'
+      '3':
+        'name': 'support.constant.tag.testmd'
+      '4':
+        'name': 'punctuation.definition.tag.testmd'
+      '5':
+        'name': 'string.quoted.double.tag.testmd'
+  }
+  {
+    'set': '^(set)(\\s+)(\\b+)(=)(.*)$'
+    'captures':
+      '1':
+        'name': 'variable.tag.testmd'
+      '3':
+        'name': 'string.quoted.double.tag.testmd'
+      '2':
+        'name': 'punctuation.definition.tag.testmd'
+      '3':
+        'name': 'string.quoted.double.tag.testmd'
+  }
+
+
 ]

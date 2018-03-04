@@ -27,3 +27,11 @@ Adds syntax highlighting and snippets to testmd (Test Markdown) files in Atom.
 ## Bugs
 
 Feel free to report an issue and make a request.
+
+
+# Deploy to atom locally
+
+rm -rf ~/.atom/packages/language-testmd/ && \
+mkdir -p ~/.atom/packages/language-testmd/ && \
+cp -R ~/co/atom-testmd-language/ ~/.atom/packages/language-testmd/
+
