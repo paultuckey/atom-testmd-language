@@ -1,66 +1,93 @@
-'name': 'TESTMD'
+'name': 'Test Markdown'
 'scopeName': 'source.testmd'
 'fileTypes': [
     'testmd'
 ]
+'limitLineLength': true
+
+# types are here
 
 'patterns': [
   {
-    'match': '^(title)(\\s+)(.*)$'
+    # variables
+    'match': '(\\$[a-zA-Z_\\.]+)'
     'captures':
       '1':
-        'name': 'meta.name.tag.testmd'
+        'name': 'storage.type.var.testmd'
+  }
+  {
+    # title
+    'match': '^(title)\\s+(.*)$'
+    'captures':
+      '1':
+        'name': 'keyword.control.tag.testmd'
       '2':
-        'name': 'punctuation.definition.tag.testmd'
-      '3':
+        'name': 'entity.name.type.testmd'
+  }
+  {
+    # name this_is_my_name
+    'match': '^\\s*(name)\\s+([a-zA-Z_]+)$'
+    'captures':
+      '1':
+        'name': 'keyword.control.tag.testmd'
+      '2':
+        'name': 'entity.name.section.testmd'
+  }
+  {
+    # note Some note
+    'match': '^\\s*(note)\\s+(.*)$'
+    'captures':
+      '1':
+        'name': 'keyword.control.tag.testmd'
+      '2':
         'name': 'comment.line.tag.testmd'
   }
   {
-    'match': '^(note)(\\s+)(.*)$'
+    # open https://example.com/
+    'match': '\\s(open)\\s+(.*)$'
     'captures':
       '1':
-        'name': 'meta.name.tag.testmd'
+        'name': 'keyword.control.tag.testmd'
       '2':
-        'name': 'punctuation.definition.tag.testmd'
-      '3':
-        'name': 'comment.line.tag.testmd'
-  }
-  {
-    'match': '^(open)(\\s+)(.*)$'
-    'captures':
-      '1':
-        'name': 'support.class.tag.testmd'
-      '2':
-        'name': 'punctuation.definition.tag.testmd'
-      '3':
         'name': 'string.quoted.double.tag.testmd'
   }
   {
-    'match': '^(find)(\\s+)(field|button)(\\s+)(.*)$'
+    'match': '^\\s*(type)\\s+(.*)$'
     'captures':
       '1':
-        'name': 'support.function.tag.testmd'
+        'name': 'keyword.control.tag.testmd'
       '2':
-        'name': 'punctuation.definition.tag.testmd'
-      '3':
+        'name': 'string.quoted.double.tag.testmd'
+  }
+  {
+    'match': '^\\s*(find|click)\\s+(field|button|image|video)\\s+(.*)$'
+    'captures':
+      '1':
+        'name': 'keyword.control.tag.testmd'
+      '2':
         'name': 'support.constant.tag.testmd'
-      '4':
-        'name': 'punctuation.definition.tag.testmd'
-      '5':
+      '3':
         'name': 'string.quoted.double.tag.testmd'
   }
   {
-    'set': '^(set)(\\s+)(\\b+)(=)(.*)$'
+    # set
+    'match': '^\\s*(set)\\s+[\\w]+\\s+(.*)$'
     'captures':
       '1':
-        'name': 'variable.tag.testmd'
-      '3':
-        'name': 'string.quoted.double.tag.testmd'
+        'name': 'keyword.control.tag.testmd'
       '2':
-        'name': 'punctuation.definition.tag.testmd'
-      '3':
         'name': 'string.quoted.double.tag.testmd'
   }
+  {
+    # run
+    'match': '\\s(run)\\s+(.*)$'
+    'captures':
+      '1':
+        'name': 'keyword.control.tag.testmd'
+      '2':
+        'name': 'string.quoted.double.tag.testmd'
+  }
+
 
 
 ]

@@ -1,4 +1,0 @@
-'.source.testmd':
-    'editor':
-        'commentStart': '<!-- '
-        'commentEnd': ' -->'
