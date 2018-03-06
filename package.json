@@ -1,10 +1,10 @@
 {
   "name": "language-testmd",
   "version": "1.0.0",
-  "description": "TESTMD language support in Atom",
+  "description": "TestMarkdown (testmd) language support in Atom",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/test-md/atom-testmd-language.git"
+    "url": "git+https://github.com/paultuckey/atom-testmd-language.git"
   },
   "license": "MIT",
   "engines": {
@@ -15,11 +15,10 @@
     "testmarkdown",
     "language",
     "grammar",
-    "syntax",
-    "snippets"
+    "syntax"
   ],
   "dependencies": {},
   "bugs": {
-    "url": "https://github.com/test-md/atom-testmd-language/issues"
+    "url": "https://github.com/paultuckey/atom-testmd-language/issues"
   }
 }
